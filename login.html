@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | FoundAction</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); // Prevent the default form submission
+            let username = document.getElementById("username").value;
+let password = document.getElementById("password").value;
+
+if (username === "hussain" && password === "123") {
+    let w = document.getElementById("w");
+    
+    // Create a new h1 element
+    let whatsapp = document.createElement("h1");
+    
+    // Set HTML content with multiple links
+    whatsapp.innerHTML = `
+    <h1>Mallick Help Foundaction: Response item</h1><br>
+(1)<a href="https://docs.google.com/spreadsheets/d/1LjQmmkBor8ylmAjA0HAr2YCe12bTi-BVbJ4j-xoVlps/edit?resourcekey=&gid=1512056411#gid=1512056411" target="_blank">Check new WhatsApp Friends</a> |
+<br>
+(2)<a href="https://docs.google.com/spreadsheets/d/1cXG1204ycXMDtzlLyzHs6Sf6zKMWXnzN9mC2i6_uFBU/edit?gid=755476899#gid=755476899" target="_blank">Check for Contact Me</a>
+    `;
+    
+    // Add a class to the element (use your specific class name)
+    whatsapp.classList.add("whatsapp-class");
+    
+    // Append the element to the container
+    w.appendChild(whatsapp);
+} else {
+    alert("User ID or password is invalid");
+}
+
+
+        }
+    </script>
+</head>
+<body class="bg-gray-700 flex items-center justify-center h-screen">
+
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <!-- Logo -->
+        <div class="text-center mb-6">
+            <img src="img/MALIKFOUNDATION.LOGO_-1-removebg-preview.png" alt="FoundAction Logo" class="mx-auto w-32">
+        </div>
+
+        <!-- Admin Login Heading -->
+        <h1 class="text-2xl font-bold text-center text-gray-800 mb-6">Admin Login</h1>
+
+        <!-- Login Form -->
+        <form onsubmit="submitForm(event)">
+            <!-- Username/Email Field -->
+            <div class="mb-4">
+                <input 
+                    type="text" 
+                    id="username" 
+                    placeholder="Username or Email" 
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent" 
+                    required>
+            </div>
+
+            <!-- Password Field -->
+            <div class="mb-4">
+                <input 
+                    type="password" 
+                    id="password" 
+                    placeholder="Password" 
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent" 
+                    required>
+            </div>
+
+            <!-- Remember Me and Forgot Password -->
+            <div class="flex items-center justify-between mb-4">
+                <label class="inline-flex items-center">
+                    <input type="checkbox" class="form-checkbox text-green-600">
+                    <span class="ml-2 text-gray-600">Remember Me</span>
+                </label>
+                <a href="#" class="text-green-600 hover:underline text-sm">Forgot Password?</a>
+            </div>
+
+            <!-- Login Button -->
+            <button 
+                type="submit" 
+                class="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg font-semibold transition duration-300">
+                Login
+            </button>
+        </form>
+
+        <!-- Footer -->
+        <footer class="mt-6 text-center text-gray-500 text-sm">
+            © 2024 FoundAction || Design by Hussain Akhter. <a href="#" class="text-green-600 hover:underline">Privacy</a> | <a href="#" class="text-green-600 hover:underline">Help</a>
+        </footer>
+
+        <p id="w"></p>
+    </div>
+
+</body>
+</html>
